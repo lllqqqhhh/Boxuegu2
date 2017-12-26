@@ -2,6 +2,7 @@ package android.gdmec.edu.cn.boxuegu.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.gdmec.edu.cn.boxuegu.R;
 import android.gdmec.edu.cn.boxuegu.activity.ExercisesDetailActivity;
 import android.gdmec.edu.cn.boxuegu.bean.ExercisesBean;
 import android.view.LayoutInflater;
@@ -32,7 +33,7 @@ public class ExercisesAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public ExercisesBean getItem(int position) {
         return ebl == null ? null : ebl.get(position);
     }
 
@@ -44,7 +45,7 @@ public class ExercisesAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final ViewHolder vh;
-        if (convertView = null){
+        if (convertView == null){
             vh = new ViewHolder();
             convertView = LayoutInflater.from(mContext).inflate(R.layout.exercises_list_item,null);
             vh.title = (TextView) convertView.findViewById(R.id.tv_title);

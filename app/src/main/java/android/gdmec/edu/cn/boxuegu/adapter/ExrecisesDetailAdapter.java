@@ -1,6 +1,7 @@
 package android.gdmec.edu.cn.boxuegu.adapter;
 
 import android.content.Context;
+import android.gdmec.edu.cn.boxuegu.R;
 import android.gdmec.edu.cn.boxuegu.bean.ExercisesBean;
 import android.gdmec.edu.cn.boxuegu.utils.AnalysisUtils;
 import android.view.LayoutInflater;
