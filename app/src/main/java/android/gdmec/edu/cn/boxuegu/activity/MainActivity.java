@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.gdmec.edu.cn.boxuegu.R;
 import android.gdmec.edu.cn.boxuegu.view.ExercisesView;
+import android.gdmec.edu.cn.boxuegu.view.MyInfoView;
 import android.graphics.Color;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
@@ -147,6 +148,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         createView(index);
         setSelectedStatus(index);
     }
+
+    private MyInfoView mMyInfoView;
+
     private void createView(int viewIndex){
         switch (viewIndex){
             case 0:
@@ -161,6 +165,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mExercisesView.showView();
                 break;
             case 2:
+                if (mMyInfoView == null){
+                    mMyInfoView = new MyInfoView(this);
+                    mBodyLayout.addView(mMyInfoView.getView());
+                }else {
+                    mMyInfoView.getView();
+                }
+                mMyInfoView.showView();
                 break;
         }
     }
