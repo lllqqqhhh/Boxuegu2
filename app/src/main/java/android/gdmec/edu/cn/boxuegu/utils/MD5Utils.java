@@ -25,12 +25,11 @@ public class MD5Utils {
                     sb.append(hex);
                 }
             }
+            return sb.toString();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-
+            return "";
         }
-
-        return "";
 
     }
 
