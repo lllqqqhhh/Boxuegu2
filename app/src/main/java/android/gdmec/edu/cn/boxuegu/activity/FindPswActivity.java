@@ -5,4 +5,5 @@ package android.gdmec.edu.cn.boxuegu.activity;
  */
 
 public class FindPswActivity {
+
 }
