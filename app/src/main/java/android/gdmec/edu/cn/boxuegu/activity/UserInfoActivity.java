@@ -96,7 +96,7 @@ public class UserInfoActivity  extends AppCompatActivity implements View.OnClick
                 bdName.putString("title","昵称");
                 bdName.putInt("flag", 1);
                 enterActivityForResult(ChangeUserInfoActivity.class,
-                        CHANGE_NICKNAME, dbName);
+                        CHANGE_NICKNAME, bdName);
                 break;
             case R.id.rl_sex:
                 String sex = tv_sex.getText().toString();
@@ -123,14 +123,14 @@ public class UserInfoActivity  extends AppCompatActivity implements View.OnClick
         }else if("女".equals(sex)){
             sexFlag = 1;
         }
-        final String item[] = {"男","女"};
+        final String items[] = {"男","女"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("性别");
         builder.setSingleChoiceItems(items, sexFlag, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                Toast.makeText(UserInfoActivity.this,item[which],Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserInfoActivity.this,items[which],Toast.LENGTH_SHORT).show();
                 setSex(items[which]);
             }
         });

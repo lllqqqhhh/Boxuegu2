@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.sun.corba.se.impl.oa.toa.TOA;
 
 /**
  * Created by student on 17/12/27.
@@ -51,7 +50,6 @@ public class ModifyPswActivity extends AppCompatActivity {
                 getEditString();
                 if (TextUtils.isEmpty(originalPsw)) {
                     Toast.makeText(ModifyPswActivity.this, "请输入原始密码",
-                            Toast.makeText(ModifyPswActivity.this, "请输入原始密码",
                                     Toast.LENGTH_SHORT).show();
                     return;
                 }else if (!MD5Utils.md5(originalPsw).equals(readPsw())) {
@@ -91,6 +89,12 @@ public class ModifyPswActivity extends AppCompatActivity {
         originalPsw = et_original_psw.getText().toString().trim();
         newPsw = et_new_psw.getText().toString().trim();
         newPswAgain=et_new_psw_again.getText().toString().trim();
+    }
+    private void modifyPsw(String newPsw){
+        String md5Psw = MD5Utils.md5(newPsw);
+        SharedPreferences sp = getSharedPreferences("loginInfo",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.commit();
     }
 
     private String readPsw(){

@@ -8,13 +8,12 @@ import android.gdmec.edu.cn.boxuegu.utils.MD5Utils;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import javax.naming.Context;
-import javax.swing.text.View;
 
 /**
  * Created by student on 17/12/27.

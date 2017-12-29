@@ -1,18 +1,24 @@
 package android.gdmec.edu.cn.boxuegu.adapter;
 
+
 import android.gdmec.edu.cn.boxuegu.bean.CourseBean;
+
+
 import android.gdmec.edu.cn.boxuegu.fragment.AdBeannerFragment;
 import android.gdmec.edu.cn.boxuegu.view.CourseView;
 import android.os.Bundle;
+
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
 import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Created by student on 17/12/27.

@@ -2,9 +2,6 @@ package android.gdmec.edu.cn.boxuegu.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.gdmec.edu.cn.boxuegu.R;
-import android.gdmec.edu.cn.boxuegu.activity.VideoListActivity;
-import android.gdmec.edu.cn.boxuegu.bean.CourseBean;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import android.gdmec.edu.cn.boxuegu.R;
+import android.gdmec.edu.cn.boxuegu.activity.VideoListActivity;
+import android.gdmec.edu.cn.boxuegu.bean.CourseBean;
 
 /**
  * Created by student on 17/12/27.

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.gdmec.edu.cn.boxuegu.R;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,9 +13,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.sun.org.apache.regexp.internal.RE;
 
-import java.awt.Color;
+
 
 /**
  * Created by student on 17/12/27.

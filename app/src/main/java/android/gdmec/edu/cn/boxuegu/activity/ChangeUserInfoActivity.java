@@ -3,21 +3,21 @@ package android.gdmec.edu.cn.boxuegu.activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.gdmec.edu.cn.boxuegu.R;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.Selection;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.awt.Color;
 
-import javax.swing.text.View;
 
 /**
  * Created by student on 17/12/27.
@@ -49,7 +49,7 @@ public class ChangeUserInfoActivity extends AppCompatActivity {
         rl_title_bar.setBackgroundColor(Color.parseColor("#30B4FF"));
         tv_back = (TextView) findViewById(R.id.tv_back);
         tv_save = (TextView) findViewById(R.id.tv_save);
-        tv_save.setVisibility(View.VERTICAL);
+        tv_save.setVisibility(View.VISIBLE);
         et_content = (EditText) findViewById(R.id.et_content);
         iv_delete = (ImageView) findViewById(R.id.iv_delete);
         if (!TextUtils.isEmpty(content)){
