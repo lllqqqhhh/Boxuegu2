@@ -59,9 +59,16 @@ public class LoginActivity extends AppCompatActivity {
                 startActivityForResult(intent,1);
             }
         });
-        tv_find_psw.setOnClickListener(new View.OnClickListener(){
+        tv_find_psw.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View v) {
+                                               Intent intent = new Intent(LoginActivity.this, FindPswActivity.class);
+                                               startActivity(intent);
+                                           }
+                                       });
+        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 userName = et_user_name.getText().toString().trim();
                 psw = et_psw.getText().toString().trim();
                 String md5Psw = MD5Utils.md5(psw);

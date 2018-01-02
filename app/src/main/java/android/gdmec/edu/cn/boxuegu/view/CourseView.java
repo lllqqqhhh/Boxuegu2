@@ -52,7 +52,7 @@ public class CourseView {
 
     public  CourseView(FragmentActivity context){
         mContext = context;
-        mInflater = LayoutInflater.from(context);
+        mInflater = LayoutInflater.from(mContext);
     }
 
     private void createView(){
@@ -63,6 +63,35 @@ public class CourseView {
         new AdAutoSlidThread().start();
     }
 
+    class MHandler extends Handler {
+        @Override
+        public void dispatchMessage(Message msg) {
+            super.dispatchMessage(msg);
+            switch (msg.what) {
+                case MSG_AD_SLID:
+                    if (ada.getCount() > 0) {
+                        adPager.setCurrentItem(adPager.getCurrentItem() + 1);
+                    }
+                    break;
+            }
+        }
+    }
+
+    class AdAutoSlidThread extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            while (true) {
+                try {
+                    sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                if (mHandler != null)
+                    mHandler.sendEmptyMessage(MSG_AD_SLID);
+            }
+        }
+    }
 
     //获取课程信息
     private void getCourseData() {
@@ -156,37 +185,6 @@ public class CourseView {
         Display display = context.getWindowManager().getDefaultDisplay();
         display.getMetrics(displayMetrics);
         return displayMetrics.widthPixels;
-    }
-
-    private class AdAutoSlidThread extends Thread {
-        @Override
-        public void run() {
-            super.run();
-            while (true){
-                try {
-                    sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                if (mHandler != null){
-                    mHandler.sendEmptyMessage(MSG_AD_SLID);
-                }
-            }
-        }
-    }
-
-    private class MHandler extends Handler{
-        @Override
-        public void dispatchMessage(Message msg) {
-            super.dispatchMessage(msg);
-            switch (msg.what){
-                case MSG_AD_SLID:
-                    if (ada.getCount()>0){
-                        adPager.setCurrentItem(adPager.getCurrentItem() + 1);
-                    }
-                    break;
-            }
-        }
     }
 
     public View getView(){
