@@ -18,11 +18,11 @@ import java.util.List;
  * Created by student on 17/12/26.
  */
 
-public class ExrecisesDetailAdapter extends BaseAdapter {
+public class ExercisesDetailAdapter extends BaseAdapter {
     private Context mContext;
     private List<ExercisesBean> ebl;
     private OnSelectListener onSelectListener;
-    public ExrecisesDetailAdapter(Context context,OnSelectListener onSelectListener){
+    public ExercisesDetailAdapter(Context context, OnSelectListener onSelectListener){
         this.mContext = context;
         this.onSelectListener = onSelectListener;
     }

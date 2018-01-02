@@ -2,20 +2,18 @@ package android.gdmec.edu.cn.boxuegu.activity;
 
 import android.content.pm.ActivityInfo;
 import android.gdmec.edu.cn.boxuegu.R;
-import android.gdmec.edu.cn.boxuegu.adapter.ExrecisesDetailAdapter;
+import android.gdmec.edu.cn.boxuegu.adapter.ExercisesDetailAdapter;
 import android.gdmec.edu.cn.boxuegu.bean.ExercisesBean;
 import android.gdmec.edu.cn.boxuegu.utils.AnalysisUtils;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +30,7 @@ public class ExercisesDetailActivity extends AppCompatActivity {
     private String title;
     private int id;
     private List<ExercisesBean> ebl;
-    private ExrecisesDetailAdapter adapter;
+    private ExercisesDetailAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -73,7 +71,7 @@ public class ExercisesDetailActivity extends AppCompatActivity {
                 ExercisesDetailActivity.this.finish();
             }
         });
-        adapter = new ExrecisesDetailAdapter(ExercisesDetailActivity.this,new ExrecisesDetailAdapter.OnSelectListener(){
+        adapter = new ExercisesDetailAdapter(ExercisesDetailActivity.this,new ExercisesDetailAdapter.OnSelectListener(){
             @Override
             public void onSelectD(int postion, ImageView iv_a, ImageView iv_b, ImageView iv_c, ImageView iv_d){
                 if (ebl.get(postion).answer != 4){
